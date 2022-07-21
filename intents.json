@@ -1,5 +1,17 @@
 {
   "intents": [
+    // not working
+    {
+      "tag":"structure",
+      "patterns":[
+        "where is the fee structure?",
+        "fee structure"
+      ],
+      "responses":[
+        "On the student portal in the finance section",
+        "visit the student portal"
+      ]
+    },
     {
       "tag": "greeting",
       "patterns": [
@@ -17,17 +29,7 @@
         "Hi there, how can I help?"
       ]
     },
-    {
-      "tag":"structure",
-      "patterns":[
-        "where is the fee structure?",
-        "fee structure"
-      ],
-      "responses":[
-        "On the student portal in the finance section",
-        "visit the student portal"
-      ]
-    },
+    
     {
       "tag": "goodbye",
       "patterns": ["Bye", "See you later", "Goodbye"],
@@ -51,7 +53,7 @@
       ]
     },
 
-
+      // not working
       { "tag": "language",
         "patterns": [
           "What languages are used in coding units?"
@@ -60,7 +62,7 @@
           "There are various languages; JavaScript, C#, Python, C+=, C,HTML CSS and PHP, to name a few"]
         },
 
-
+        // answers come from the coding tag
       { "tag": "stater language",
         "patterns":[
           "What language should I start with?"
@@ -80,7 +82,7 @@
       "responses": [
         "All fees must be payed by the end of the second month."]
       },
-
+      // answer comes from the previous payments
       {"tag": "receipts",
         "patterns":[
           "Can I get a receipt?"],
@@ -90,7 +92,7 @@
       
     },
 
-
+    // answer comes from payments intents
       {"tag":"mobile payment",
       "patterns":[
           "Can I pay with Mpesa?",
@@ -100,7 +102,7 @@
         "The school paybill is 522384 and the account number is the student's registration number."
       ]
     },
-
+    // brings tell me more
     {
       "tag": "access",
       "patterns": [
@@ -132,6 +134,7 @@
         "A class takes 3 hours max."
       ]
     },
+    // working
     {
       "tag": "funny",
       "patterns": [
@@ -145,6 +148,7 @@
       ]
     },
 	{
+    // working
 		"tag": "registration",
 		"patterns": [
 		  "Where do I register units?"
@@ -153,9 +157,10 @@
 		  "Unit registration is done on the student portal under the academics section."
     ]
   },
-  { "tag": "units number",
+  // returns previous registration
+  { "tag": "modules",
     "patterns":[
-		  "How many units are studied in one semester?"
+		  "How many modules are studied in one semester?"
     ],
     "responses":[
 		  "This depends on the course you take."
