@@ -51,12 +51,13 @@ class Chatbox {
             'http://127.0.0.1:5000/predict', 
             {
                 method: 'POST',
-                body: JSON.stringify({ message: text1 }),
-                mode: 'no-cors',
+                mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-            })
+                body: JSON.stringify({ message: text1 }),
+            }
+            )
             .then(response => response.json())
             .then(r => {
                 let msg2 = { name: "Anne", message: r.answer };

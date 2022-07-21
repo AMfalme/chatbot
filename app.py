@@ -11,15 +11,13 @@ def index_get():
 
 @app.post("/predict")
 def predict():
-    print(request.data)
-    text = request.get_json().get("message")
     try:
-        print("We are here")
         text = request.get_json().get("message")
     except Exception as e: 
         print('error occured: ',e)
     # TODO:check if text is valid
     response = get_response(text)
+    print(response)
     message = {"answer": response}
     return jsonify(message)
 
