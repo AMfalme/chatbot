@@ -1,4 +1,3 @@
-import torch
 import torch.nn as nn
 
 
@@ -20,13 +19,16 @@ class NeuralNet(nn.Module):
         return out
 
 
-class Student(object):
-    def __init__(self, first_name, last_name, DOB, faculty, *args):
+class Student(db.):
+    def __init__(self, name, DOB, study_year, faculty,reg_no, course, fee_balance, *args):
         super(Student, self).__init__(*args)
-        self.first_name = first_name
-        self.last_name = last_name
+        self.name = name
         self.DOB = DOB
         self.faculty = faculty
+        self.reg_no = reg_no
+        self.course = course
+        self.fee_balance = fee_balance
+        self.study_year = study_year
         
         
 

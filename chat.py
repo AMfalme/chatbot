@@ -33,11 +33,9 @@ bot_name = "Anne"
 
 def get_response(msg):
     sentence = tokenize(msg)
-    print('sentence: ',sentence)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
-    print(X)
 
     output = model(X)
     _, predicted = torch.max(output, dim=1)
@@ -49,7 +47,6 @@ def get_response(msg):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                print(tag)
                 return random.choice(intent['responses'])
     
     return "Okay, kindly tell more ..."
