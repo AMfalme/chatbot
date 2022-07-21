@@ -1,0 +1,189 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag":"structure",
+      "patterns":[
+        "where is the fee structure?",
+        "fee structure"
+      ],
+      "responses":[
+        "On the student portal in the finance section",
+        "visit the student portal"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+      {"tag": "coding",
+      "patterns": [
+        "How can I learn coding?"
+      ],
+      "responses": [
+        "Start by typing: 'How to learn coding' on Google."
+      ]
+    },
+
+
+      { "tag": "language",
+        "patterns": [
+          "What languages are used in coding units?"
+      ],
+        "responses":[
+          "There are various languages; JavaScript, C#, Python, C+=, C,HTML CSS and PHP, to name a few"]
+        },
+
+
+      { "tag": "stater language",
+        "patterns":[
+          "What language should I start with?"
+        ],
+        "responses":[
+          "C is the most basic language...there are diverse tutorials available on YouTube."
+        ]
+   
+    },
+
+
+    {
+      "tag": "payments",
+      "patterns": [
+		"When is the fee payment deadline?"
+      ],
+      "responses": [
+        "All fees must be payed by the end of the second month."]
+      },
+
+      {"tag": "receipts",
+        "patterns":[
+          "Can I get a receipt?"],
+        "responses":[
+          "Receipts are generated at the students' portal under the finance option"
+        ]
+      
+    },
+
+
+      {"tag":"mobile payment",
+      "patterns":[
+          "Can I pay with Mpesa?",
+          "How do I pay fees via mobile?"
+      ],
+      "responses":[
+        "The school paybill is 522384 and the account number is the student's registration number."
+      ]
+    },
+
+    {
+      "tag": "access",
+      "patterns": [
+        "Where can I access recorded classes?",
+        "I need the recorded classes"
+      ],
+      "responses": [
+          "They're on the e-learning platform under the unit you require.",
+          "They can ony be on the e-learning portal"
+      ]
+    },
+    {  "tag": "schedules",
+      "patterns":[
+          "How many classes are held in a day?",
+          "How many classes can i have daily?"
+      ],
+      "responses": [
+        "A maximum of 3 classes can be held in a day.",
+        "On a daily,three classes may be held."
+      ]
+    },
+    { "tag": "time",
+      "patterns":[
+          "What time do classes start and how long does each take?",
+          "How long does a class take?"
+      ],
+      "responses": [
+        "Classes may start as early as 7am. Each takes 3hours.",
+        "A class takes 3 hours max."
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    },
+	{
+		"tag": "registration",
+		"patterns": [
+		  "Where do I register units?"
+    ],
+    "responses": [
+		  "Unit registration is done on the student portal under the academics section."
+    ]
+  },
+  { "tag": "units number",
+    "patterns":[
+		  "How many units are studied in one semester?"
+    ],
+    "responses":[
+		  "This depends on the course you take."
+    ]
+  },
+  { "tag": " intake",
+	   "patterns": [
+      "When does the school intake happen?"
+     ],
+     "responses":[
+      "Intake is done in September for the government sponsored students(JAB) and in January, May and September for self-sponsored students."
+     ]
+  },
+  { "tag":  "online registration",
+		  "patterns": [
+        "Can I register as a student online?"
+		],
+      "responses":[
+        "For a new student, registration can only be physically done. If you're a continuing student, registration is possible on the student portal."
+    ]	
+	},
+  {
+    "tag": "not found text",
+      "patterns": [
+        "I do not understand",
+        "Kindly tell me more",
+        "Robots are intelligent but I am yet to be told"
+      ]
+  }
+]
+}
