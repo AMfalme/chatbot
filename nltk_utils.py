@@ -5,8 +5,6 @@ from nltk.stem.porter import PorterStemmer
 
 from nltk.chat.util import Chat, reflections
 
-print(reflections)
-
 stemmer = PorterStemmer()
 
 

@@ -54,11 +54,7 @@ body {
 }
 
 .send__button {
-    /* padding: 6px;
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer; */
+    
     padding: 6px;
     background: #0008ff9c;
     border: 1px solid #eee;
@@ -238,4 +234,5 @@ body {
     cursor: pointer;
     background: #0062cc;
     color: #fff;
+    float: right;
 }

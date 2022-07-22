@@ -3,20 +3,24 @@ class Chatbox {
         this.args = {
             openButton: document.querySelector('.chatbox__button'),
             chatBox: document.querySelector('.chatbox__support'),
-            sendButton: document.querySelector('.send__button')
+            sendButton: document.querySelector('.send__button'),
+            
+            
         }
 
         this.state = false;
         this.messages = [];
     }
-
+  
     display() {
         const {openButton, chatBox, sendButton} = this.args;
 
         openButton.addEventListener('click', () => this.toggleState(chatBox))
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
-
+        
+        createStudent.addEventListener('click', ()=> this.createStudent())
+        
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
             if (key === "Enter") {
@@ -48,7 +52,7 @@ class Chatbox {
         console.log(this.messages);
         
         fetch(
-            'http://127.0.0.1:5000/predict', 
+            'http://localhost:5000/predict', 
             {
                 method: 'POST',
                 mode: 'cors',
