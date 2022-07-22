@@ -23,7 +23,7 @@ class Student(db.Model):
     username = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     DOB = db.Column(db.DateTime(), nullable=False, default=datetime.utcnow)
-    faculty = db.Column(ChoiceTypes(FACULTY_TYPES), nullable=False)
+    faculty = db.Column(db.String(80), nullable=False)
     reg_no = db.Column(db.String(80), unique= True, nullable=False)
     course = db.Column(db.String(80), nullable=False)
     def __repr__(self):
@@ -85,7 +85,22 @@ def predict():
 
 @app.get("/report")
 def report():
-    data = {'Task' : 'Hours per Day', 'FOBE' : 5, 'ENGINEERING' : 11, 'FAMECO' : 2, 'CIT' : 2, 'MEDICINE' : 2, 'FOST' : 7}
+    FOBE = Student.query.filter(Student.faculty == 'FOBE').count()
+    FAMECO = Student.query.filter(Student.faculty == 'FAMECO').count()
+    CIT = Student.query.filter(Student.faculty == 'CIT').count()
+    ENG = Student.query.filter(Student.faculty == 'ENG').count()
+    MEDICINE = Student.query.filter(Student.faculty == 'MEDICINE').count()
+    FOST = Student.query.filter(Student.faculty == 'FOST').count()
+    print(FOBE, FAMECO, MEDICINE, ENG, CIT, FOST)
+    
+    data = {
+        'Task' : 'Faculty registrations', 
+        'FOBE' : FOBE, 
+        'ENG' : ENG, 
+        'FAMECO' : FAMECO, 
+        'CIT' : CIT, 
+        'MEDICINE' : MEDICINE, 
+        'FOST' : FOST}
     #print(data)
     return render_template('pie-chart.html', data=data)
 

@@ -19,7 +19,7 @@ class Chatbox {
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
         
-        createStudent.addEventListener('click', ()=> this.createStudent())
+      
         
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
